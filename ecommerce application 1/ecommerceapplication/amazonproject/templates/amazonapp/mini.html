@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>customer details<h1>
+    {% if customer %}
+    <table border="">
+        <thead>
+            <th>customer id</th>
+            <th>customer name</th>
+            <th>customer address</th>
+            <th>customer phonenumber</th>   
+        </thead>
+        {% for cust in customer %}
+        <tr>
+            <td>{{cust.custid}}</td>
+            <td>{{cust.custname}}</td>
+            <td>{{cust.custaddr}}</td>
+            <td>{{cust.custphnno}}</td>
+            <td>{{cust.custphoto}}</td>
+        </tr>
+        {% endfor %}
+    </table> 
+    {% else %} 
+    <p>amazon customer not found in the list</p>
+    {% endif %}  
+</body>
+</html>
